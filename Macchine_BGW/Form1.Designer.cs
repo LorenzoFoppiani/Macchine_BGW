@@ -37,6 +37,9 @@
             this.pic_macchina1 = new System.Windows.Forms.PictureBox();
             this.pic_macchina2 = new System.Windows.Forms.PictureBox();
             this.btn_avvio = new System.Windows.Forms.Button();
+            this.btn_riavvio = new System.Windows.Forms.Button();
+            this.txt_win = new System.Windows.Forms.TextBox();
+            this.btn_stop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_strada4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_strada3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_strada2)).BeginInit();
@@ -121,17 +124,48 @@
             // 
             this.btn_avvio.Location = new System.Drawing.Point(50, 62);
             this.btn_avvio.Name = "btn_avvio";
-            this.btn_avvio.Size = new System.Drawing.Size(75, 23);
+            this.btn_avvio.Size = new System.Drawing.Size(75, 20);
             this.btn_avvio.TabIndex = 6;
             this.btn_avvio.Text = "Avvio";
             this.btn_avvio.UseVisualStyleBackColor = true;
             this.btn_avvio.Click += new System.EventHandler(this.btn_avvio_Click);
+            // 
+            // btn_riavvio
+            // 
+            this.btn_riavvio.Location = new System.Drawing.Point(131, 62);
+            this.btn_riavvio.Name = "btn_riavvio";
+            this.btn_riavvio.Size = new System.Drawing.Size(75, 20);
+            this.btn_riavvio.TabIndex = 7;
+            this.btn_riavvio.Text = "Riavvia";
+            this.btn_riavvio.UseVisualStyleBackColor = true;
+            this.btn_riavvio.Click += new System.EventHandler(this.btn_riavvio_Click);
+            // 
+            // txt_win
+            // 
+            this.txt_win.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_win.Location = new System.Drawing.Point(212, 62);
+            this.txt_win.Name = "txt_win";
+            this.txt_win.Size = new System.Drawing.Size(159, 20);
+            this.txt_win.TabIndex = 8;
+            // 
+            // btn_stop
+            // 
+            this.btn_stop.Location = new System.Drawing.Point(377, 62);
+            this.btn_stop.Name = "btn_stop";
+            this.btn_stop.Size = new System.Drawing.Size(75, 20);
+            this.btn_stop.TabIndex = 9;
+            this.btn_stop.Text = "Stop";
+            this.btn_stop.UseVisualStyleBackColor = true;
+            this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_stop);
+            this.Controls.Add(this.txt_win);
+            this.Controls.Add(this.btn_riavvio);
             this.Controls.Add(this.btn_avvio);
             this.Controls.Add(this.pic_macchina2);
             this.Controls.Add(this.pic_macchina1);
@@ -148,6 +182,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_macchina1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_macchina2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -162,6 +197,9 @@
         private System.Windows.Forms.PictureBox pic_macchina1;
         private System.Windows.Forms.PictureBox pic_macchina2;
         private System.Windows.Forms.Button btn_avvio;
+        private System.Windows.Forms.Button btn_riavvio;
+        private System.Windows.Forms.TextBox txt_win;
+        private System.Windows.Forms.Button btn_stop;
     }
 }
 
