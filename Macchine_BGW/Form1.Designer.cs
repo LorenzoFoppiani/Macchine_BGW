@@ -122,7 +122,7 @@
             // 
             // btn_avvio
             // 
-            this.btn_avvio.Location = new System.Drawing.Point(51, 103);
+            this.btn_avvio.Location = new System.Drawing.Point(36, 347);
             this.btn_avvio.Name = "btn_avvio";
             this.btn_avvio.Size = new System.Drawing.Size(75, 20);
             this.btn_avvio.TabIndex = 6;
@@ -132,7 +132,7 @@
             // 
             // btn_riavvio
             // 
-            this.btn_riavvio.Location = new System.Drawing.Point(132, 103);
+            this.btn_riavvio.Location = new System.Drawing.Point(117, 347);
             this.btn_riavvio.Name = "btn_riavvio";
             this.btn_riavvio.Size = new System.Drawing.Size(75, 20);
             this.btn_riavvio.TabIndex = 7;
@@ -143,14 +143,14 @@
             // txt_win
             // 
             this.txt_win.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txt_win.Location = new System.Drawing.Point(213, 103);
+            this.txt_win.Location = new System.Drawing.Point(198, 348);
             this.txt_win.Name = "txt_win";
             this.txt_win.Size = new System.Drawing.Size(159, 20);
             this.txt_win.TabIndex = 8;
             // 
             // btn_stop
             // 
-            this.btn_stop.Location = new System.Drawing.Point(378, 103);
+            this.btn_stop.Location = new System.Drawing.Point(363, 347);
             this.btn_stop.Name = "btn_stop";
             this.btn_stop.Size = new System.Drawing.Size(75, 20);
             this.btn_stop.TabIndex = 9;
@@ -162,6 +162,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Macchine_BGW.Properties.Resources.background;
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_stop);
             this.Controls.Add(this.txt_win);
