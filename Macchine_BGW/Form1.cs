@@ -41,8 +41,12 @@ namespace Macchine_BGW
 
         private void bgw_macchina1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (bgw_macchina2.IsBusy)
+            //Se macchina2 sta correndo ed è indietro rispetto a macchina1
+            if (bgw_macchina2.IsBusy && pic_macchina1.Location.X > pic_macchina2.Location.X)
                 txt_win.Text = "MACCHINA 2 VINCE!";
+            //Altrimenti (gara annullata)
+            else if (bgw_macchina1.CancellationPending)
+                txt_win.Text = "Gara annullata";
         }
 
         private void bgw_macchina2_DoWork(object sender, DoWorkEventArgs e)
@@ -52,7 +56,9 @@ namespace Macchine_BGW
                 Thread.Sleep(rng.Next(100, 200));
                 bgw_macchina2.ReportProgress(i);
                 if (bgw_macchina2.CancellationPending)
+                {
                     break;
+                }
             }
         }
 
@@ -64,8 +70,10 @@ namespace Macchine_BGW
 
         private void bgw_macchina2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (bgw_macchina1.IsBusy)
+            if (bgw_macchina1.IsBusy && pic_macchina2.Location.X > pic_macchina1.Location.X)
                 txt_win.Text = "MACCHINA 1 VINCE!";
+            else if(bgw_macchina2.CancellationPending)
+                txt_win.Text = "Gara annullata";
         }
 
         private void btn_avvio_Click(object sender, EventArgs e)
@@ -76,10 +84,10 @@ namespace Macchine_BGW
 
         private void btn_riavvio_Click(object sender, EventArgs e)
         {
-            pic_macchina1.Location = new Point(pic_macchina1.Location.X - Width + 120, pic_macchina1.Location.Y);
-            pic_macchina2.Location = new Point(pic_macchina2.Location.X -Width+120, pic_macchina2.Location.Y);
-            //Modo poco affidabile di resettare la posizione delle macchine, non sono riuscito ad implementare una variabile globale che tenga conto della posizione iniziale
-            //e.g >> Point p1 = new Point(pic_macchina1.Location.X, pic_macchina1.Location.Y);
+            pic_macchina1.Location = new Point(0, pic_macchina1.Location.Y);
+            pic_macchina2.Location = new Point(0, pic_macchina2.Location.Y);
+
+            txt_win.Text = "";
 
             bgw_macchina1.RunWorkerAsync();
             bgw_macchina2.RunWorkerAsync();
@@ -91,8 +99,6 @@ namespace Macchine_BGW
             bgw_macchina2.CancelAsync();
             txt_win.Text = "";
             txt_win.Text = "Gara annullata";
-
-            //L'implementazione del tasto "Stop" è poco affidabile perché non ho modo di resettare la posizione dell macchine con esattezza
         }
     }
 }

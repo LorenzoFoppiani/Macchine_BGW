@@ -103,7 +103,7 @@
             // pic_macchina1
             // 
             this.pic_macchina1.Image = global::Macchine_BGW.Properties.Resources.macchinabianca;
-            this.pic_macchina1.Location = new System.Drawing.Point(12, 233);
+            this.pic_macchina1.Location = new System.Drawing.Point(0, 233);
             this.pic_macchina1.Name = "pic_macchina1";
             this.pic_macchina1.Size = new System.Drawing.Size(100, 50);
             this.pic_macchina1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -113,7 +113,7 @@
             // pic_macchina2
             // 
             this.pic_macchina2.Image = global::Macchine_BGW.Properties.Resources.macchinarossa;
-            this.pic_macchina2.Location = new System.Drawing.Point(12, 157);
+            this.pic_macchina2.Location = new System.Drawing.Point(0, 157);
             this.pic_macchina2.Name = "pic_macchina2";
             this.pic_macchina2.Size = new System.Drawing.Size(100, 50);
             this.pic_macchina2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +122,7 @@
             // 
             // btn_avvio
             // 
-            this.btn_avvio.Location = new System.Drawing.Point(50, 62);
+            this.btn_avvio.Location = new System.Drawing.Point(51, 103);
             this.btn_avvio.Name = "btn_avvio";
             this.btn_avvio.Size = new System.Drawing.Size(75, 20);
             this.btn_avvio.TabIndex = 6;
@@ -132,7 +132,7 @@
             // 
             // btn_riavvio
             // 
-            this.btn_riavvio.Location = new System.Drawing.Point(131, 62);
+            this.btn_riavvio.Location = new System.Drawing.Point(132, 103);
             this.btn_riavvio.Name = "btn_riavvio";
             this.btn_riavvio.Size = new System.Drawing.Size(75, 20);
             this.btn_riavvio.TabIndex = 7;
@@ -142,15 +142,15 @@
             // 
             // txt_win
             // 
-            this.txt_win.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_win.Location = new System.Drawing.Point(212, 62);
+            this.txt_win.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txt_win.Location = new System.Drawing.Point(213, 103);
             this.txt_win.Name = "txt_win";
             this.txt_win.Size = new System.Drawing.Size(159, 20);
             this.txt_win.TabIndex = 8;
             // 
             // btn_stop
             // 
-            this.btn_stop.Location = new System.Drawing.Point(377, 62);
+            this.btn_stop.Location = new System.Drawing.Point(378, 103);
             this.btn_stop.Name = "btn_stop";
             this.btn_stop.Size = new System.Drawing.Size(75, 20);
             this.btn_stop.TabIndex = 9;
